@@ -1,4 +1,4 @@
-var e={TOGGLE_WIDGET:`TOGGLE_WIDGET`,READY:`READY`};(function(){let t=`ss-chat-loader`;if(document.getElementById(t+`-container`))return;let n=document.createElement(`div`);n.id=t+`-container`,document.body.appendChild(n);let r=n.attachShadow({mode:`open`}),i=document.createElement(`style`);i.textContent=`
+var e={TOGGLE_WIDGET:`TOGGLE_WIDGET`,READY:`READY`};(()=>{let t=()=>{let t=`ss-chat-loader`;if(document.getElementById(t+`-container`))return;let n=document.createElement(`div`);n.id=t+`-container`,document.body.appendChild(n);let r=n.attachShadow({mode:`open`}),i=document.createElement(`style`);i.textContent=`
     :host {
       position: fixed;
       bottom: 20px;
@@ -63,4 +63,4 @@ var e={TOGGLE_WIDGET:`TOGGLE_WIDGET`,READY:`READY`};(function(){let t=`ss-chat-l
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
-      `)};s.addEventListener(`click`,()=>l()),window.addEventListener(`message`,t=>{let n=t.data;if(n.source===`widget`)switch(n.type){case e.TOGGLE_WIDGET:l(n.payload?.open);break;case e.READY:console.log(`Widget Ready`);break}})})();
+      `)};s.addEventListener(`click`,()=>l()),window.addEventListener(`message`,t=>{let n=t.data;if(n.source===`widget`)switch(n.type){case e.TOGGLE_WIDGET:l(n.payload?.open);break;case e.READY:console.log(`Widget Ready`);break}})};if(document.body){t();return}window.addEventListener(`DOMContentLoaded`,t,{once:!0})})();
