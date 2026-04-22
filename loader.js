@@ -59,8 +59,17 @@ var e={TOGGLE_WIDGET:`TOGGLE_WIDGET`,READY:`READY`};(()=>{let t=document.current
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
-      `):(s.classList.remove(`open`),l.classList.remove(`open`),l.innerHTML=`
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
-      `)};l.addEventListener(`click`,()=>d()),window.addEventListener(`message`,t=>{let n=t.data;if(n.source===`widget`)switch(n.type){case e.TOGGLE_WIDGET:d(n.payload?.open);break;case e.READY:console.log(`Widget Ready`);break}})};if(document.body){i();return}window.addEventListener(`DOMContentLoaded`,i,{once:!0})})();
+      `):(s.classList.remove(`open`),l.classList.remove(`open`),l.innerHTML=`<svg
+            class="chat-btn-icon-default"
+            viewBox="0 0 48 48"
+            fill="none"
+          >
+            <circle cx="24" cy="24" r="24" fill="#dbe3ff"></circle>
+            <circle cx="24" cy="24" r="18" fill="#3f66e0"></circle>
+            <rect x="15.5" y="17.5" width="17" height="12" rx="6" fill="white"></rect>
+            <path d="M22 29.5L19.5 33V29.5H22Z" fill="white"></path>
+            <rect x="17.6" y="19.8" width="12.6" height="7.4" rx="3.7" fill="#5c7cee"></rect>
+            <circle cx="21.2" cy="23.5" r="1.1" fill="white"></circle>
+            <circle cx="24" cy="23.5" r="1.1" fill="white"></circle>
+            <circle cx="26.8" cy="23.5" r="1.1" fill="white"></circle>
+          </svg>`)};l.addEventListener(`click`,()=>d()),window.addEventListener(`message`,t=>{let n=t.data;if(n.source===`widget`)switch(n.type){case e.TOGGLE_WIDGET:d(n.payload?.open);break;case e.READY:console.log(`Widget Ready`);break}})};if(document.body){i();return}window.addEventListener(`DOMContentLoaded`,i,{once:!0})})();
