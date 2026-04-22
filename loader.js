@@ -1,4 +1,4 @@
-import{t as e}from"./assets/bridge-WnRKv1qb.js";(function(){let t=`ss-chat-loader`;if(document.getElementById(t+`-container`))return;let n=document.createElement(`div`);n.id=t+`-container`,document.body.appendChild(n);let r=n.attachShadow({mode:`open`}),i=document.createElement(`style`);i.textContent=`
+var e={TOGGLE_WIDGET:`TOGGLE_WIDGET`,READY:`READY`};(function(){let t=`ss-chat-loader`;if(document.getElementById(t+`-container`))return;let n=document.createElement(`div`);n.id=t+`-container`,document.body.appendChild(n);let r=n.attachShadow({mode:`open`}),i=document.createElement(`style`);i.textContent=`
     :host {
       position: fixed;
       bottom: 20px;
@@ -50,17 +50,17 @@ import{t as e}from"./assets/bridge-WnRKv1qb.js";(function(){let t=`ss-chat-loade
     .toggle-button.open svg {
       transform: rotate(90deg);
     }
-  `,r.appendChild(i);let a=document.createElement(`iframe`);a.className=`widget-iframe`,a.src=`./index.html`,r.appendChild(a);let o=document.createElement(`div`);o.className=`toggle-button`,o.innerHTML=`
+  `,r.appendChild(i);let a=document.createElement(`iframe`);a.className=`widget-iframe`;let o=document.currentScript;a.src=`${o?.src?new URL(`./`,o.src).toString():`./`}index.html`,r.appendChild(a);let s=document.createElement(`div`);s.className=`toggle-button`,s.innerHTML=`
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
     </svg>
-  `,r.appendChild(o);let s=!1,c=e=>{s=e===void 0?!s:e,s?(a.classList.add(`open`),o.classList.add(`open`),o.innerHTML=`
+  `,r.appendChild(s);let c=!1,l=e=>{c=e===void 0?!c:e,c?(a.classList.add(`open`),s.classList.add(`open`),s.innerHTML=`
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
-      `):(a.classList.remove(`open`),o.classList.remove(`open`),o.innerHTML=`
+      `):(a.classList.remove(`open`),s.classList.remove(`open`),s.innerHTML=`
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
-      `)};o.addEventListener(`click`,()=>c()),window.addEventListener(`message`,t=>{let n=t.data;if(n.source===`widget`)switch(n.type){case e.TOGGLE_WIDGET:c(n.payload?.open);break;case e.READY:console.log(`Widget Ready`);break}})})();
+      `)};s.addEventListener(`click`,()=>l()),window.addEventListener(`message`,t=>{let n=t.data;if(n.source===`widget`)switch(n.type){case e.TOGGLE_WIDGET:l(n.payload?.open);break;case e.READY:console.log(`Widget Ready`);break}})})();

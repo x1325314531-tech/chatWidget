@@ -1,1 +1,0 @@
-var e={TOGGLE_WIDGET:`TOGGLE_WIDGET`,SET_WIDGET_SIZE:`SET_WIDGET_SIZE`,READY:`READY`,SEND_MESSAGE:`SEND_MESSAGE`},t=(e,t)=>{window.parent.postMessage({type:e,payload:t,source:`widget`},`*`)};export{t as n,e as t};
